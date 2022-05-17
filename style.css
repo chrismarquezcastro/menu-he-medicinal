@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&family=Work+Sans:wght@300&display=swap");
+
+:root {
+  --primary-text-color: black;
+  --text-body-color: rgb(15, 16, 17);
+  --secondary-text-color: #6e7680;
+  --hyperlink-color: rgb(0, 85, 255);
+  --primary-bg-color: #fcfffc;
+  --secondary-bg-color: white;
+  --terciary-bg-color: #eaedf1;
+  --border-color: rgba(0, 13, 255, 0.199);
+  --subtle-shadow-color: rgba(0, 0, 0, 0.05);
+  --primary-outline-color: rgb(185, 139, 255);
+  --primary-highlight-color: rgb(145, 255, 139);
+}
+
+body {
+  background-color: var(--primary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  gap: 1rem;
+  max-width: 1080px;
+  margin: 0.5rem;
+}
+
+.product-card {
+  background-color: var(--secondary-bg-color);
+  box-shadow: 0 4px 4px 1px var(--subtle-shadow-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  scale: 1.1;
+  transition: 1s;
+  box-shadow: 0 4px 12px 4px var(--subtle-shadow-color);
+}
+
+.card-title {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  background-color: var(--terciary-bg-color);
+}
+
+.card-label {
+  font-family: "Bebas Neue", cursive;
+  color: var(--secondary-text-color);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.card-description {
+  font-family: "Work Sans", sans-serif;
+  line-height: 150%;
+  font-size: 1.1rem;
+  color: var(--secondary-text-color);
+}
+
+/* Media Query for views smaller than 800 */
+
+@media (max-width: 800px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Media Query for views smaller than 420 */
+
+@media (max-width: 500px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
