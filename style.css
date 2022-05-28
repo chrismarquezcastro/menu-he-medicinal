@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300&family=Work+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;800&family=Work+Sans:wght@300&display=swap");
 
 :root {
   --primary-text-color: black;
   --text-body-color: rgb(15, 16, 17);
   --secondary-text-color: #6e7680;
   --hyperlink-color: rgb(0, 85, 255);
-  --primary-bg-color: #fcfffc;
+  --primary-bg-color: #041606;
   --secondary-bg-color: white;
   --terciary-bg-color: #eaedf1;
-  --border-color: rgba(0, 13, 255, 0.199);
+  --border-color: rgb(2, 4, 40);
   --subtle-shadow-color: rgba(0, 0, 0, 0.05);
   --primary-outline-color: rgb(185, 139, 255);
   --primary-highlight-color: rgb(145, 255, 139);
@@ -17,15 +17,21 @@
 body {
   background-color: var(--primary-bg-color);
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
+}
+
+.heading {
+  color: greenyellow;
+  font-size: 3rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
 }
 
 .products-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-flow: row;
   gap: 1rem;
   max-width: 1080px;
   margin: 0.5rem;
@@ -33,10 +39,9 @@ body {
 
 .product-card {
   background-color: var(--secondary-bg-color);
-  box-shadow: 0 4px 4px 1px var(--subtle-shadow-color);
+  border: 2px solid var(--border-color);
   padding: 1rem;
   border-radius: 1rem;
-  cursor: pointer;
 }
 
 .product-card:hover {
@@ -49,7 +54,7 @@ body {
   font-size: 2rem;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  background-color: var(--terciary-bg-color);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .card-label {
@@ -64,6 +69,31 @@ body {
   line-height: 150%;
   font-size: 1.1rem;
   color: var(--secondary-text-color);
+}
+
+.presentaciones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.presentacion {
+  text-align: center;
+  border-right: 1px solid var(--border-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--secondary-text-color);
+}
+
+.presentacion-header {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.remove-border {
+  border-right: none;
 }
 
 /* Media Query for views smaller than 800 */
