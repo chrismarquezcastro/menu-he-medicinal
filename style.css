@@ -48,12 +48,6 @@ body {
   border-radius: 0.25rem;
 }
 
-.product-card:hover {
-  scale: 1.1;
-  transition: 1s;
-  box-shadow: 0 4px 12px 4px var(--subtle-shadow-color);
-}
-
 .card-title {
   font-size: 3rem;
   font-family: "Montserrat", sans-serif;
