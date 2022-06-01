@@ -7,8 +7,8 @@
   --hyperlink-color: rgb(0, 85, 255);
   --primary-bg-color: #041606;
   --secondary-bg-color: white;
-  --terciary-bg-color: #eaedf1;
-  --border-color: yellowgreen;
+  --terciary-bg-color: #fcffff;
+  --border-color: slateblue;
   --subtle-shadow-color: rgba(0, 0, 0, 0.05);
   --primary-outline-color: rgb(185, 139, 255);
   --primary-highlight-color: rgb(145, 255, 139);
@@ -20,16 +20,23 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  padding-top: 6rem;
 }
 
 .heading {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   -webkit-text-stroke: 1.5px greenyellow; /* width and color */
   text-shadow: 0 0 1.5rem greenyellow;
   letter-spacing: 2px;
   text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  margin: 0 2rem;
+  background-color: #041606e3;
+  width: 100vw;
+  padding: 1rem;
 }
 
 .products-grid {
@@ -41,11 +48,12 @@ body {
 }
 
 .product-card {
-  background-color: var(--secondary-bg-color);
-  border: 2px solid var(--border-color);
+  background-color: var(--terciary-bg-color);
+  border: 4px solid var(--border-color);
   padding: 2rem;
   margin: 2rem;
-  border-radius: 0.25rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 5rem rgb(96, 72, 255);
 }
 
 .card-title {
@@ -56,10 +64,11 @@ body {
 }
 
 .card-label {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Masqualero", cursive;
+  text-transform: uppercase;
   color: var(--secondary-text-color);
-  font-size: 2rem;
-  letter-spacing: 4px;
+  font-size: 1.2rem;
+  letter-spacing: 8px;
   text-align: center;
 }
 
@@ -72,12 +81,17 @@ p {
   color: var(--primary-text-color);
 }
 
+.card-description {
+  margin-bottom: 3rem;
+}
+
 .presentaciones {
+  background-color: var(--secondary-bg-color);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   border: 2px solid var(--border-color);
   border-radius: 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 2rem;
   align-items: center;
 }
 
@@ -113,7 +127,7 @@ p {
 
 @media (max-width: 800px) {
   .heading {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .presentacion {
@@ -128,13 +142,5 @@ p {
   .card-description,
   p {
     font-size: 1.2rem;
-  }
-}
-
-/* Media Query for views smaller than 420 */
-
-@media (max-width: 500px) {
-  .heading {
-    font-size: 2rem;
   }
 }
